@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/p1_stand.png" type="Texture" id=1]
+[ext_resource path="res://scripts/player.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.2376, 41 )
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 0, 2.1736e+07 )
+script = ExtResource( 2 )
+
+[node name="p1_stand" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.572, 5 )
+shape = SubResource( 1 )
